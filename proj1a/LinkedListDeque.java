@@ -1,22 +1,16 @@
 
 /**
  * 双端队列是具有动态大小的序列容器，可以在两端（前端或后端）扩展或收缩。
- *
+ * <p>
  * 使用带有一个哨兵节点的循环双向链表来实现双端队列。
  */
-public class LinkedListDeque<T> implements MyDeque<T> {
+public class LinkedListDeque<T> {
 
     // 哨兵
-    Node<T> sentinel;
-
-//    // 链表头部节点
-//    Node<T> first;
-//
-//    // 链表尾部节点
-//    Node<T> last;
+    private Node<T> sentinel;
 
     // 元素个数
-    int size = 0;
+    private int size = 0;
 
     /**
      * 创建一个空的链表双端队列。
@@ -154,7 +148,7 @@ public class LinkedListDeque<T> implements MyDeque<T> {
             return temp.item;
         } else {
             Node<T> temp = sentinel.prev;
-            for (int i = size-1; i > index; i--) {
+            for (int i = size - 1; i > index; i--) {
                 temp = temp.prev;
             }
             return temp.item;
