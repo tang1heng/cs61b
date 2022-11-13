@@ -27,7 +27,6 @@ public class LinkedListDeque<T> {
      *
      * @param item
      */
-    @Override
     public void addFirst(T item) {
         Node<T> newNode = new Node<>(sentinel, item, sentinel.next);
         sentinel.next.prev = newNode;
@@ -40,7 +39,6 @@ public class LinkedListDeque<T> {
      *
      * @param item
      */
-    @Override
     public void addLast(T item) {
         Node<T> newNode = new Node<>(sentinel.prev, item, sentinel);
         sentinel.prev.next = newNode;
@@ -53,7 +51,6 @@ public class LinkedListDeque<T> {
      *
      * @return
      */
-    @Override
     public boolean isEmpty() {
         return sentinel.next == sentinel;
     }
@@ -63,7 +60,6 @@ public class LinkedListDeque<T> {
      *
      * @return
      */
-    @Override
     public int size() {
         return size;
     }
@@ -71,7 +67,6 @@ public class LinkedListDeque<T> {
     /**
      * 从头到尾打印双端队列中的元素，用空格分隔
      */
-    @Override
     public void printDeque() {
         Node<T> temp = sentinel.next;
         while (temp != sentinel) {
@@ -86,7 +81,6 @@ public class LinkedListDeque<T> {
      *
      * @return
      */
-    @Override
     public T removeFirst() {
         if (isEmpty()) {
             return null;
@@ -109,7 +103,6 @@ public class LinkedListDeque<T> {
      *
      * @return
      */
-    @Override
     public T removeLast() {
         if (isEmpty()) {
             return null;
@@ -134,7 +127,6 @@ public class LinkedListDeque<T> {
      * @param index
      * @return
      */
-    @Override
     public T get(int index) {
         if (index < 0 || index >= size) {
             return null;
