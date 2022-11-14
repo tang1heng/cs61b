@@ -15,11 +15,11 @@ public class ArrayDeque<T> {
 
     // 队列头部（指向队列头部元素）
     // deque头元素的索引
-    int head;
+    private int head;
 
     // 队列尾部（指向队列尾部元素的下一个）
     // 将下一个元素添加到deque尾部的索引
-    int tail;
+    private int tail;
 
     /**
      * 创建一个空数组双端队列。
