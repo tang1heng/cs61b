@@ -1,5 +1,3 @@
-package org.example.deque;
-
 import java.util.Arrays;
 
 /**
